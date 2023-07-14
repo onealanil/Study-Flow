@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-rows: repeat(4, 350px);
+  grid-auto-rows: minmax((400px, auto));
+  grid-gap: 1em;
+  height: 100%;
+} */
+
+/* .border {
+  border: 1px black solid;
+  height: 350px;
+} */
+
+.showComplete,
+.showProgress,
+.showAll {
+  font-size: 15px;
+  float: left;
+  margin-right: 10px;
+}
+
+.showComplete:hover,
+.showProgress:hover,
+.showAll:hover {
+  display: inline-block;
+  border-radius: 5px;
+  line-height: 25px;
+  transition: all 0.4s;
+}
+
+.showComplete:hover::after,
+.showProgress:hover::after,
+.showAll:hover::after {
+  content: " Show Completed Tasks ";
+  position: absolute;
+  font-size: 20px;
+  top: 65px;
+  left: 10px;
+}
+
+.showProgress:hover::after {
+  content: "Show In Progress Tasks";
+}
+
+.showAll:hover::after {
+  content: " Show All Tasks ";
+}
